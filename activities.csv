@@ -1,0 +1,2 @@
+activityId,activityParentId,activityParentName,calories,description,duration,hasActiveZoneMinutes,hasStartTime,isFavorite,lastModified,logId,name,startDate,startTime,steps,date
+90013,90013,Walk,363,"Walking less than 2 mph, strolling very slowly",5171000,True,True,False,2023-04-29T16:06:01.000Z,55439337001,Walk,2023-04-28,20:49,6269,2023-04-28
