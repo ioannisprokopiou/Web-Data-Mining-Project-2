@@ -22,5 +22,3 @@ df = pd.DataFrame(oneDayData['activities-heart-intraday']['dataset'])
 
 filename = oneDayData['activities-heart'][0]['dateTime'] +'_intradata'
 
-df.to_csv(filename + '.csv', index = False)
-df.to_excel(filename + '.xlsx', index = False)
