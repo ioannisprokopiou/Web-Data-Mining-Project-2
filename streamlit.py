@@ -42,7 +42,9 @@ distances_pivot = distances.pivot(index='date', columns='activity', values='dist
 distances_pivot.reset_index(inplace=True)
 distances_pivot = distances_pivot.drop(['loggedActivities','sedentaryActive','tracker'], axis=1)
 distances_pivot = distances_pivot[['date','total','lightlyActive','moderatelyActive','veryActive']]
-st.bar_chart(distances_pivot, x = 'date',y=['lightlyActive','moderatelyActive','veryActive'])
+distances_pivot = distances_pivot.rename(columns={'date':'Date','total':'Total','lightlyActive':'Lightly Active',
+                                                    'moderatelyActive':'Moderately Active','veryActive':'Very Active'})
+st.bar_chart(distances_pivot, x = 'Date',y=['Lightly Active','Moderately Active','Very Active'])
 
 st.subheader('Heart Rate daily trend')
 heartRate_max = heartRate.groupby('date').agg({'value': 'max'})
@@ -152,13 +154,6 @@ with st.container():
                                                     'moderatelyActive':'Moderately Active','veryActive':'Very Active'})
   
   st.table(distances_pivot_selected)
-
-  
-  
-  
-  
-
-  
 
   st.markdown('**Heart Rate trend**')
   st.line_chart(heartRate_selected, x='time',y='value', height=250)
