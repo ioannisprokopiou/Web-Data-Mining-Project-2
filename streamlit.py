@@ -72,7 +72,7 @@ st.divider()
 
 st.text( "Welcome to this step of our data app development project!" )
 st.text("In this step, we will be sharing some interesting visualizations")
-st.text("For more detailed information look our [medium article](https://medium.com/@stoikopoyloyeleonwra/dac2ab8beaf9).")
+st.markdown("For more detailed information look our [medium article](https://medium.com/@stoikopoyloyeleonwra/dac2ab8beaf9).")
 toc.placeholder()
 
 toc.header("Activities visualizations")
