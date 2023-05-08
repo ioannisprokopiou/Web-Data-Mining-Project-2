@@ -226,10 +226,12 @@ toc.subheader('Heart rate zone minutes total percentage by day for Each Category
 with st.container():
   col1, col2 = st.columns([1,2],gap='large')
   col1.markdown('**Select category to preview data**')
-  category = col1.select_slider(
-    'category',
-    options=heartRateZones['name'].unique(),
-    label_visibility = 'collapsed')
+  # category = col1.select_slider(
+  #   'category',
+  #   options=heartRateZones['name'].unique(),
+  #   label_visibility = 'collapsed')
+  category = col1.radio(
+    "Select category to preview dat",options=heartRateZones['name'].unique(),label_visibility = 'collapsed')
   minutes_pivoted_selected = minutes_pivoted[['date',category]]
   col2.markdown('**Heart Rate Zone Minutes by Day**')
   col2.bar_chart(minutes_pivoted_selected, x = 'date', )
