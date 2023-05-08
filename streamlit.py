@@ -1,13 +1,8 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import io
-import matplotlib.patches as mpatches
-import seaborn as sns
 import plotly.express as px
 import plotly.graph_objects as go
+
 # Load the datasets
 activities = pd.read_csv('activities.csv')
 activities_summary = pd.read_csv('activities_summary.csv')
