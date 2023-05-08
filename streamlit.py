@@ -39,7 +39,7 @@ class Toc:
 
 toc = Toc()
 st.title('Web Data Mining - Project 2')
-st.markdown(' ##### Στοϊκοπούλου Ελεονώρα | Γεροχρήστου Μαργαρίτα | Προκοπίου Ιωάννης ')
+st.markdown(' ##### Stoikopoulou Eleonora | Gerochristou Margarita | Prokopiou Ioannis ')
 st.divider()
 heartRateZones = pd.read_csv('heartRateZones.csv')
 distances = pd.read_csv('distances.csv')
@@ -72,7 +72,7 @@ st.divider()
 
 st.text( "Welcome to this step of our data app development project!" )
 st.text("In this step, we will be sharing some interesting visualizations")
-st.text("For more detailed information look our [medium article](https://www.example.com/).")
+st.text("For more detailed information look our [medium article](https://medium.com/@stoikopoyloyeleonwra/dac2ab8beaf9).")
 toc.placeholder()
 
 toc.header("Activities visualizations")
