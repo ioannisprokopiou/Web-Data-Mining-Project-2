@@ -138,7 +138,7 @@ st.markdown('**Select walk session to preview data**')
 activities = activities[activities['activityParentName'] == 'Walk']
 activities = activities[['calories', 'duration', 'steps', 'date', 'startTime' ]]
 activities['dateTime'] = activities.apply(lambda x: x['date'] + ' ' + x['startTime'], axis=1)
-session = st.select_slider(
+session = st.selectbox(
   'session',
   options=activities['dateTime'],
   label_visibility = 'collapsed')
